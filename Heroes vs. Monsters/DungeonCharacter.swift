@@ -23,6 +23,7 @@ class DungeonCharacter {
         chance = 0.9
     }
     
+    //attacks opponent
     func attack() -> Int {
         let checkHit = hit()
         if checkHit == true {
@@ -39,7 +40,7 @@ class DungeonCharacter {
     
     //test for hit or miss
     func hit() -> Bool {
-        let check = Int(10*chance)
+        let check = Int(10*(1-chance))
         let miss = Int.random(in: 1...10)
         if miss <= check {
             return false

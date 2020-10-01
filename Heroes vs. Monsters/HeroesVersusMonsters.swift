@@ -31,12 +31,12 @@ class HeroesVersusMonsters {
     
     //returns true if someone wins, false otherwise
     func checkWin() -> Bool {
-        if p1.hitPoints == 0 {
-            "the computer has win"
+        if p1.hitPoints <= 0 {
+            print("the computer has won")
             return true
         }
-        else if (comp.hitPoints == 0) {
-            "congrats you have won"
+        else if (comp.hitPoints <= 0) {
+            print("congrats you have won")
             return true
         }
         return false
